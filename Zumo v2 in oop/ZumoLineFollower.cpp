@@ -2,7 +2,7 @@
 
 ZumoLineFollower::ZumoLineFollower() : 
     calibrator(lineSensors, buttonA, buzzer),
-    pidController(400, 2000, 1.5, 1.5, 0.5),
+    pidController(maxVermogen, 2000, 1.5, 1.5, 0.5), // maxvermogen, target error, const_int, const_afg, const_error
     maxVermogen(400) {}
 
 void ZumoLineFollower::setup() {
