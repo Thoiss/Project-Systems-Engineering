@@ -6,6 +6,8 @@ using namespace std;
 
 class frontProxSensor : public Zumo32U4ProximitySensors{
     public:
+    frontProxSensor();
+    ~frontProxSensor();
     void read();
     void initFrontSensor();
     uint8_t countsFrontWithLeftLeds();
