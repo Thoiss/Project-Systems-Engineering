@@ -3,6 +3,9 @@
 frontProxSensor::frontProxSensor(){
   unsigned int microsecond = 1000000;
 }
+frontProxSensor::~frontProxSensor(){
+  
+}
 
 void frontProxSensor::setup(){
   frontProxSensor.initFrontSensor();
