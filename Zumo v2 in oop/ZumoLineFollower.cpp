@@ -48,7 +48,7 @@ void ZumoLineFollower::drive() {
         //implementatie van pitch is 0 en dan pas weer verder rijden.
     }
     else {
-    // Implementatie van sumo deel met blokje uit de cirkel beuken.
+        proxSensor.actuatesensor();
     return 0;
     }
 

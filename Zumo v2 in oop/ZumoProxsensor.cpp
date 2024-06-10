@@ -8,7 +8,7 @@ void ZumoProxsensor::init() {
 
 int ZumoProxsensor::read() {
     proxSensors.read();
-    int frontproxreading = proxSensors.countsFrontWithLeftLeds() + proxSensors.countsFrontWithRightLeds();
+    frontproxreading = proxSensors.countsFrontWithLeftLeds() + proxSensors.countsFrontWithRightLeds();
     return frontproxreading;
 }
 
@@ -21,7 +21,7 @@ bool ZumoProxsensor::detect() {
     }
 }
 
-int ZumoProxsensor::getsensor() {
+int ZumoProxsensor::actuatesensor() {
     if (detect() = false) {
         motor.setSpeeds(-50, 50);
         delay(250);

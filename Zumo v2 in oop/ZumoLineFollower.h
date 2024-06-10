@@ -5,6 +5,7 @@
 #include <Zumo32U4.h>
 #include "ZumoCalibrator.h"
 #include "ZumoPIDController.h"
+#include "ZumoProxSensor.h"
 
 class ZumoLineFollower {
 public:
@@ -22,6 +23,7 @@ private:
 
     ZumoCalibrator calibrator;
     ZumoPIDController pidController;
+    ZumoProxSensor proxSensor;
 
     unsigned int sensorWaarde[5] = {0, 0, 0, 0, 0};
     int maxVermogen;

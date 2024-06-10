@@ -1,22 +1,19 @@
-#ifndef ZUMO_PID_CONTROLLER_H
-#define ZUMO_PID_CONTROLLER_H
+#ifndef PROXSENSOR_H
+#define PROXSENSOR_H
 
-#include <Wire.h>
-#include <Zumo32U4.h>
+#include <Zumo32U4ProximitySensors.h>
 
-class ZumoPIDController {
+class ZumoProxsensor {
 public:
-    ZumoPIDController(int maxVermogen, int error_offset, float diff_constant_int, float diff_constant_afg, float diff_constant_error);
-    void excecute(int error, Zumo32U4Motors& motors);
+    ZumoProxsensor();
+    void init();
+    void read();
+    bool detect();
+    void actuatesensor();
 
 private:
-    int maxVermogen;
-    const int error_offset;
-    const float diff_constant_int;
-    const float diff_constant_afg;
-    const float diff_constant_error;
-    int16_t lastError;
-    int16_t error_integral;
+    Zumo32U4ProximitySensors proxSensors;
+    int frontproxreading
 };
 
-#endif // ZUMO_PID_CONTROLLER_H
+#endif // PROXSENSOR_H
