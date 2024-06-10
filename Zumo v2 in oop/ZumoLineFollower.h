@@ -11,6 +11,8 @@ public:
     ZumoLineFollower();
     void setup();
     void loop();
+    void checkuitkomst();
+    void drive();
 
 private:
     Zumo32U4LineSensors lineSensors;
@@ -23,9 +25,6 @@ private:
 
     unsigned int sensorWaarde[5];
     int maxVermogen;
-
-    void checkuitkomst();
-    void drive();
 };
 
 #endif // ZUMO_LINE_FOLLOWER_H
