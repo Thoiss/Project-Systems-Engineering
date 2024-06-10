@@ -16,6 +16,8 @@ private:
     Zumo32U4ButtonA& buttonA;
     Zumo32U4Buzzer& buzzer;
     int black, gray, green, brown;
+    unsigned int sensorWaarde[5];
 };
+
 
 #endif // ZUMO_CALIBRATOR_H
