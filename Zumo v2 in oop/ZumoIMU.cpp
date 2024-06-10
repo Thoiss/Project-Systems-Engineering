@@ -2,9 +2,9 @@
 #include <cmath>
 
 ZumoIMU::ZumoIMU() {
-    float ax = imu.a.x;
-    float ay = imu.a.y;
-    float az = imu.a.z;
+    float ax = imu.a.x; // X-as waarde van de accelerometer
+    float ay = imu.a.y; // Y-as waarde van de accelerometer
+    float az = imu.a.z; // Z-as waarde van de accelerometer
 }
 
 void ZumoIMU::init() {
