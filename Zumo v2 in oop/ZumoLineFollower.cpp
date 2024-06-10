@@ -47,7 +47,7 @@ void ZumoLineFollower::drive() {
         while (getPitch() > 0) {//implementatie van pitch is 0 en dan pas weer verder rijden.
             motors.setSpeeds(0, 0);
         }
-        
+        // zumo gaat misschien niet verder omdat de grijze lijn nog steeds wordt gezien
     }
     else {
         proxSensor.actuatesensor();
