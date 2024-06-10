@@ -44,10 +44,12 @@ void ZumoLineFollower::drive() {
     }
     else if ((sensorWaarde[1] > gray - 30 && sensorWaarde[1] < gray + 30) && (sensorWaarde[3] > gray - 30 && sensorWaarde[3] < gray + 30)) {
         buzzer.play(">g32");
+        motors.setSpeeds(0, 0);
         while (getPitch() > 0) {//implementatie van pitch is 0 en dan pas weer verder rijden.
             motors.setSpeeds(0, 0);
         }
-        // zumo gaat misschien niet verder omdat de grijze lijn nog steeds wordt gezien
+        delay(1000);
+        motors.setSpeeds(100, 100);
     }
     else {
         proxSensor.actuatesensor();
