@@ -23,7 +23,7 @@ private:
     ZumoCalibrator calibrator;
     ZumoPIDController pidController;
 
-    unsigned int sensorWaarde[5];
+    unsigned int sensorWaarde[5] = {0, 0, 0, 0, 0};
     int maxVermogen;
 };
 

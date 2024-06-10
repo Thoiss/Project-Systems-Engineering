@@ -5,19 +5,19 @@ ZumoCalibrator::ZumoCalibrator(Zumo32U4LineSensors& sensors, Zumo32U4ButtonA& bu
 
 void ZumoCalibrator::calibrateColor() {
     lineSensors.read(sensorWaarde);
-    black = sensorWaarde[3];
+    black = sensorWaarde[2];
     buzzer.play(">g32");
     buttonA.waitForButton();
     lineSensors.read(sensorWaarde);
-    gray = sensorWaarde[3];
+    gray = sensorWaarde[2];
     buzzer.play(">g32");
     buttonA.waitForButton();
     lineSensors.read(sensorWaarde);
-    green = sensorWaarde[3];
+    green = sensorWaarde[2];
     buzzer.play(">g32");
     buttonA.waitForButton();
     lineSensors.read(sensorWaarde);
-    brown = sensorWaarde[3];
+    brown = sensorWaarde[2];
     buzzer.play(">g32");
     buttonA.waitForButton();
 }

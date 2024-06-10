@@ -30,21 +30,27 @@ void ZumoLineFollower::drive() {
     int black = calibrator.getColorValue("black");
     int gray = calibrator.getColorValue("gray");
 
-    if (sensorWaarde[2] > green - 20 && sensorWaarde[2] < green + 20) {
+    if (sensorWaarde[2] > green - 30 && sensorWaarde[2] < green + 30) {
         maxVermogen = 200;
-    } else if (sensorWaarde[2] > brown - 20 && sensorWaarde[2] < brown + 20) {
+    } else if (sensorWaarde[2] > brown - 30 && sensorWaarde[2] < brown + 30) {
         motors.setSpeeds(0, 0);
         buzzer.play(">g32");
         motors.setSpeeds(100, 100);
-        delay(1000);
-    } else if (sensorWaarde[2] > black - 20 && sensorWaarde[2] < black + 20) {
+        delay(1500);
+    } else if (sensorWaarde[2] > black - 30 && sensorWaarde[2] < black + 30) {
         maxVermogen = 350;
-    } else if (sensorWaarde[2] > gray - 20 && sensorWaarde[2] < gray + 20) {
+    } else if (sensorWaarde[2] > gray - 30 && sensorWaarde[2] < gray + 30) {
         // implementatie van het afslaan naar links of rechts bij grijs detectie
     }
-    // else {
-    // Implementatie van sumo deel met blokje uit de cirkel beuken
-    // }
+    else if ((sensorWaarde[1] > gray - 30 && sensorWaarde[1] < gray + 30) && (sensorWaarde[3] > gray - 30 && sensorWaarde[3] < gray + 30)) {
+        motors.setSpeeds(0, 0);
+        buzzer.play(">g32");
+        //implementatie van pitch is 0 en dan pas weer verder rijden.
+    }
+    else {
+    // Implementatie van sumo deel met blokje uit de cirkel beuken.
+    return 0;
+    }
 
 }
 

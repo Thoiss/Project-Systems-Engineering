@@ -16,7 +16,7 @@ private:
     Zumo32U4ButtonA& buttonA;
     Zumo32U4Buzzer& buzzer;
     int black, gray, green, brown;
-    unsigned int sensorWaarde[5];
+    unsigned int sensorWaarde[5] = {0, 0, 0, 0, 0};
 };
 
 
