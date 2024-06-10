@@ -43,9 +43,11 @@ void ZumoLineFollower::drive() {
         // implementatie van het afslaan naar links of rechts bij grijs detectie
     }
     else if ((sensorWaarde[1] > gray - 30 && sensorWaarde[1] < gray + 30) && (sensorWaarde[3] > gray - 30 && sensorWaarde[3] < gray + 30)) {
-        motors.setSpeeds(0, 0);
         buzzer.play(">g32");
-        //implementatie van pitch is 0 en dan pas weer verder rijden.
+        while (getPitch() > 0) {//implementatie van pitch is 0 en dan pas weer verder rijden.
+            motors.setSpeeds(0, 0);
+        }
+        
     }
     else {
         proxSensor.actuatesensor();

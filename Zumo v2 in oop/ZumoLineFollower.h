@@ -6,6 +6,7 @@
 #include "ZumoCalibrator.h"
 #include "ZumoPIDController.h"
 #include "ZumoProxSensor.h"
+#include "ZumoIMU.h"
 
 class ZumoLineFollower {
 public:
